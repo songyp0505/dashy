@@ -1,105 +1,76 @@
 ---
 pageInfo:
-  title: SZP Dashboard
-  description: 常用入口、开发部署和社区资讯
-  navLinks:
-    - title: GitHub
-      path: https://github.com/
-    - title: Vercel
-      path: https://vercel.com/songyp0505s-projects/
-    - title: Cloudflare
-      path: https://dash.cloudflare.com/
+  title: SuperYP Start
+  description: AI / Dev / Community
+  navLinks: []
 
 appConfig:
-  theme: colorful
-  layout: masonry
+  theme: zinc
+  dayTheme: zinc
+  nightTheme: zinc
+  layout: auto
+  colCount: 3
   iconSize: medium
   language: zh-CN
   defaultOpeningMethod: newtab
   statusCheck: false
   pingCheckEnabled: false
   preventWriteToDisk: true
+  disableConfiguration: true
+  hideComponents:
+    hideSearch: true
+    hideSettings: true
   webSearch:
     searchEngine: duckduckgo
     openingMethod: newtab
     openUrlsDirectly: true
+  customColors:
+    zinc:
+      primary: "#38bdf8"
+  customCss: >-
+    header{max-width:1120px;margin:0 auto;padding:28px 24px 12px!important}
+    header .page-titles h1{font-size:28px!important;font-weight:650!important}
+    header .page-titles span.subtitle{font-size:14px!important;opacity:.72}
+    section.settings-outer{display:none!important}
+    .item-group-container{max-width:1120px;margin:0 auto!important;padding:8px 24px 36px!important}
+    .collapsable{border-radius:8px!important}
+    .section-header{padding:12px 14px!important}
+    .section-header h3{font-size:16px!important}
+    .header-action,.opening-method-icon{display:none!important}
+    .item{min-height:64px!important}
 
 sections:
-  - name: AI 工具
+  - name: AI
     icon: fas fa-magic
     displayData:
-      cols: 2
-      itemSize: large
+      itemSize: medium
     items:
-      - title: Gemini
-        description: Google AI 助手
-        url: https://gemini.google.com/app
-        icon: favicon
+      - { title: Gemini, description: Google AI, url: "https://gemini.google.com/app", icon: favicon }
 
-  - name: 开发部署
+  - name: Dev
     icon: fas fa-code
     displayData:
-      cols: 2
-      itemSize: large
+      itemSize: medium
     items:
-      - title: GitHub
-        description: 代码仓库和开源项目
-        url: https://github.com/
-        icon: si-github
+      - { title: GitHub, description: Repositories, url: "https://github.com/", icon: si-github }
+      - { title: Vercel, description: Deployments, url: "https://vercel.com/songyp0505s-projects/", icon: si-vercel }
+      - { title: Cloudflare, description: DNS / Domains, url: "https://dash.cloudflare.com/", icon: si-cloudflare }
 
-      - title: Vercel
-        description: 项目部署和域名绑定
-        url: https://vercel.com/songyp0505s-projects/
-        icon: si-vercel
-
-      - title: Cloudflare
-        description: DNS、域名和网络服务
-        url: https://dash.cloudflare.com/
-        icon: si-cloudflare
-
-  - name: 社区资讯
+  - name: Community
     icon: fas fa-comments
     displayData:
-      cols: 2
       itemSize: medium
     items:
-      - title: V2EX
-        description: 技术与生活社区
-        url: https://www.v2ex.com/
-        icon: favicon
+      - { title: V2EX, url: "https://www.v2ex.com/", icon: favicon }
+      - { title: NodeSeek, url: "https://www.nodeseek.com/", icon: favicon }
+      - { title: Linux.do, url: "https://linux.do/", icon: favicon }
+      - { title: Hacker News, url: "https://news.ycombinator.com/", icon: si-ycombinator }
+      - { title: X, url: "https://x.com/", icon: si-x }
 
-      - title: NodeSeek
-        description: 主机、网络和技术社区
-        url: https://www.nodeseek.com/
-        icon: favicon
-
-      - title: Linux.do
-        description: 技术讨论社区
-        url: https://linux.do/
-        icon: favicon
-
-      - title: Hacker News
-        description: 科技新闻和创业讨论
-        url: https://news.ycombinator.com/
-        icon: si-ycombinator
-
-      - title: X
-        description: 社交资讯和实时动态
-        url: https://x.com/
-        icon: favicon
-
-  - name: 事务入口
+  - name: Affairs
     icon: fas fa-folder-open
     displayData:
-      cols: 2
       itemSize: medium
     items:
-      - title: CCopyright
-        description: 版权相关服务
-        url: https://www.ccopyright.com/
-        icon: favicon
-
-      - title: 教务系统
-        description: 学校教务入口
-        url: https://jiaowu.rzmevc.edu.cn/admin
-        icon: favicon
+      - { title: CCopyright, description: Copyright, url: "https://www.ccopyright.com/", icon: favicon }
+      - { title: 教务系统, description: Campus, url: "https://jiaowu.rzmevc.edu.cn/admin", icon: favicon }

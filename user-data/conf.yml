@@ -1,58 +1,105 @@
 ---
-# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: SZP Dashboard
+  description: 常用入口、开发部署和社区资讯
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
+    - title: GitHub
+      path: https://github.com/
+    - title: Vercel
+      path: https://vercel.com/songyp0505s-projects/
+    - title: Cloudflare
+      path: https://dash.cloudflare.com/
 
-# Optional app settings and configuration
 appConfig:
   theme: colorful
+  layout: masonry
+  iconSize: medium
+  language: zh-CN
+  defaultOpeningMethod: newtab
+  statusCheck: false
+  pingCheckEnabled: false
+  preventWriteToDisk: true
+  webSearch:
+    searchEngine: duckduckgo
+    openingMethod: newtab
+    openUrlsDirectly: true
 
-# Main content - An array of sections, each containing an array of items
 sections:
-  - name: Getting Started
-    icon: fas fa-rocket
+  - name: AI 工具
+    icon: fas fa-magic
+    displayData:
+      cols: 2
+      itemSize: large
+    items:
+      - title: Gemini
+        description: Google AI 助手
+        url: https://gemini.google.com/app
+        icon: favicon
+
+  - name: 开发部署
+    icon: fas fa-code
+    displayData:
+      cols: 2
+      itemSize: large
     items:
       - title: GitHub
-        description: Source Code, Issues and Pull Requests
-        url: https://github.com/lissy93/dashy
+        description: 代码仓库和开源项目
+        url: https://github.com/
         icon: si-github
-      - title: Docs
-        description: Configuring & Usage Documentation
-        provider: Dashy.to
-        icon: far fa-book
-        url: https://dashy.to/docs
 
-  - name: Support Dashy
-    icon: fas fa-heart
+      - title: Vercel
+        description: 项目部署和域名绑定
+        url: https://vercel.com/songyp0505s-projects/
+        icon: si-vercel
+
+      - title: Cloudflare
+        description: DNS、域名和网络服务
+        url: https://dash.cloudflare.com/
+        icon: si-cloudflare
+
+  - name: 社区资讯
+    icon: fas fa-comments
     displayData:
-      itemSize: large
-    widgets:
-      - type: image
-        label: Dashy is made possible thanks to our awesome sponsors
-        options:
-          imagePath: https://readme-contribs.as93.net/sponsors/lissy93?perRow=5&shape=squircle
+      cols: 2
+      itemSize: medium
     items:
-      - title: Sponsor
-        url: https://github.com/sponsors/lissy93
-        description: Sponsor @Lissy93 on GitHub to support with ongoing development of Dashy
-        icon: 🩷
-        color: '#ff78d1'
-        backgroundColor: '#c30c844a'
+      - title: V2EX
+        description: 技术与生活社区
+        url: https://www.v2ex.com/
+        icon: favicon
 
-  - name: Latest Updates
-    icon: fas fa-code-branch
+      - title: NodeSeek
+        description: 主机、网络和技术社区
+        url: https://www.nodeseek.com/
+        icon: favicon
+
+      - title: Linux.do
+        description: 技术讨论社区
+        url: https://linux.do/
+        icon: favicon
+
+      - title: Hacker News
+        description: 科技新闻和创业讨论
+        url: https://news.ycombinator.com/
+        icon: si-ycombinator
+
+      - title: X
+        description: 社交资讯和实时动态
+        url: https://x.com/
+        icon: favicon
+
+  - name: 事务入口
+    icon: fas fa-folder-open
     displayData:
-      cols: 1
-      rows: 3
-      cutToHeight: true
-    widgets:
-      - type: rss-feed
-        options:
-          rssUrl: https://github.com/lissy93/dashy/releases.atom
-          limit: 5
+      cols: 2
+      itemSize: medium
+    items:
+      - title: CCopyright
+        description: 版权相关服务
+        url: https://www.ccopyright.com/
+        icon: favicon
+
+      - title: 教务系统
+        description: 学校教务入口
+        url: https://jiaowu.rzmevc.edu.cn/admin
+        icon: favicon
